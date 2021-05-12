@@ -1,0 +1,29 @@
+{
+  "presets": [
+    [
+      "next/babel"
+    ]
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "_middlewares": "./src/middlewares",
+          "_db": "./src/db",
+          "_api": "./src/api",
+          "_user": "./src/api/user",
+          "_atoms": "./src/components/atoms",
+          "_molecules": "./src/components/molecules",
+          "_organisms": "./src/components/organisms",
+          "_styles": "./src/styles",
+          "_hooks": "./src/hooks",
+          "_services": "./src/services",
+          "_utils": "./src/utils",
+          "_store": "./src/utils/store"
+        }
+      }
+    ]
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "extends": ["airbnb-base", "plugin:react/recommended"],
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "plugins": ["import"],
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "rules": {
+    "semi": ["error", "never"],
+    "arrow-parens": ["error", "as-needed"],
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn", "info", "error"]
+      }
+    ],
+    "react/react-in-jsx-scope": "off"
+  },
+  "globals": {
+    "React": "writable"
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
+  "parser": "babel-eslint"
+}
