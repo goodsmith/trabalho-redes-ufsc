@@ -1,7 +1,7 @@
-import next from 'next'
-import { Server } from 'http'
-import express from 'express'
-import socketIO from 'socket.io'
+const next = require('next')
+const Server = require('http').Server
+const app = require('express')()
+const io = require('socket.io')()
 
 const port = process.env.PORT || 3000
 
@@ -14,13 +14,10 @@ nextApp.prepare().then(() => {
   }
 
   // Cria servidor HTTP pra servir o site
-  const app = express()
   const server = Server(app)
   app.get('*', handler)
 
   // Cria servidor TCP
-  const io = socketIO(server)
-
   io.on('connect', socket => {
     socket.emit('now', 'connected to TCP server')
     socket.emit('state', state)
