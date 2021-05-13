@@ -10,7 +10,9 @@
     "@babel/core": "^7.7.5",
     "@babel/node": "^7.7.4",
     "@babel/preset-env": "^7.7.6",
+    "@svgr/webpack": "^5.5.0",
     "babel-eslint": "^10.0.3",
+    "babel-plugin-inline-react-svg": "^2.0.1",
     "babel-plugin-module-resolver": "^3.2.0",
     "eslint": "^6.7.2",
     "eslint-config-airbnb-base": "^14.0.0",
@@ -21,27 +23,24 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
-    "axios": "^0.19.2",
-    "bcrypt": "^3.0.7",
-    "body-parser": "^1.19.0",
+    "axios": "^0.21.1",
     "classnames": "^2.2.6",
-    "dotenv": "^8.2.0",
+    "dotenv": "^9.0.2",
     "eslint-plugin-react": "^7.19.0",
-    "express": "^5.0.0-alpha.7",
-    "js-cookie": "^2.2.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongodb": "^3.3.5",
-    "mongoose": "^5.7.14",
-    "multer": "^1.4.2",
-    "next": "^9.3.0",
+    "express": "^4.17.1",
+    "next": "^10.2.0",
     "prop-types": "^15.7.2",
     "ramda": "^0.27.0",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "validator": "^12.1.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-toast-notifications": "^2.4.4",
+    "socket.io": "^4.1.1",
+    "socket.io-client": "^4.1.1",
+    "use-media": "^1.4.0"
   },
   "scripts": {
-    "dev": "nodemon --exec babel-node src/index.js",
-    "start": "babel-node src/index.js"
+    "dev": "nodemon --exec babel-node src/server.js --watch src/server.js",
+    "build": "next build",
+    "start": "node dist/index.js"
   }
 }
